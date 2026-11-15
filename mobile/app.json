@@ -1,0 +1,70 @@
+{
+  "expo": {
+    "name": "PDF MASTER",
+    "slug": "pdf-masters",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B2A5B"
+    },
+    "android": {
+      "package": "com.pdfmasters.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0B2A5B"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "ios": {
+      "bundleIdentifier": "com.pdfmasters.app",
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "PDF MASTER uses the camera to scan your documents.",
+        "NSPhotoLibraryUsageDescription": "PDF MASTER lets you pick images to turn into PDFs.",
+        "NSUserTrackingUsageDescription": "This identifier is used to show you more relevant ads."
+      }
+    },
+    "plugins": [
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-4469462902321828~8788511225",
+          "iosAppId": "ca-app-pub-3940256099942544~1458002511",
+          "userTrackingPermission": "This identifier is used to show you more relevant ads."
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 24,
+            "usesCleartextTraffic": false
+          }
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "PDF MASTER uses the camera to scan your documents."
+        }
+      ],
+      "./plugins/withKotlinSkipMetadata"
+    ],
+    "extra": {
+      "apiUrl": "https://example.com",
+      "eas": {
+        "projectId": "0fd7dbcf-3071-4e19-b5aa-78ae48d2a2c2"
+      }
+    },
+    "owner": "josephfidelis"
+  }
+}
